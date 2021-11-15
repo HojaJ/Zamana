@@ -1,0 +1,207 @@
+
+
+@media (max-width: 768px) {
+    html {
+        overflow-x: hidden;
+    }
+    body {
+        overflow-y: auto;
+    }
+
+    .bottles__imgs img {
+        max-width: 75%;
+    }
+    .footer .logo {
+        justify-content: center;
+        margin-top: 60px;
+        margin-bottom: 30px;
+    }
+    .moments-slider .swiper-pagination .swiper-pagination-bullet {
+        width: 50px;
+    }
+    .suggest-slider .suggests-button-next {
+        right: 10%;
+    }
+    .suggest-slider .suggests-button-prev {
+        left: 10%;
+    }
+
+    .bottles__imgs:hover .bottles__img-1 {
+        transform: rotate( -8deg) translate(-70px, 1px);
+        z-index: -3;
+      }
+      .bottles__imgs:hover .bottles__img-2 {
+        z-index: -2;
+        transform: rotate( 1deg) translate(4px, 0px);
+       }
+      
+      .bottles__imgs:hover .bottles__img-3 {
+        transform: rotate( 7deg) translate(70px, 15px);
+        z-index: -1;
+      }
+      .bottles__img-3 {
+        margin-left: -90px;
+    }
+    .bottles__img-1 {
+        margin-right: -90px;
+    }
+
+    .testimonials-slider {
+        padding: 0 0 5rem;
+    }
+    .footer {
+        background-size: 135% 100%;
+    }
+
+    .suggests {
+        padding-bottom: 50px;
+    }
+
+    .testimonials-slider .testimonials-button-next, .testimonials-slider .testimonials-button-prev{
+        bottom: 1%;
+        left: calc(50% - 30px);
+    }
+    .testimonials-slider .testimonials-button-next {
+        left: calc(50% + 30px);
+    }
+
+    .contact_us {
+        padding: 3.5rem 9rem 1rem 6rem;
+        
+      }
+     
+      .contact_us .see-all {
+        width: 80px;
+      }
+      .contact_us textarea {
+          height: 110px;
+      }
+      .contact_us textarea, .contact_us input {
+        padding: 4px 15px;
+      }
+
+    
+ }
+
+ @media (max-width: 500px) { 
+    .custom-shape-divider-bottom-1634679102 {
+        width: 110%;
+    }
+    .clients, 
+    .footer {
+        background-size: 125% 100%;
+    }
+    .suggest-slider .suggests-button-next {
+        right: 5%;
+    }
+    .suggest-slider .suggests-button-prev {
+        left: 5%;
+    }
+    .testimonials h2,
+    .clients h3 {
+        font-size: 1.5rem;
+    }
+
+    .testimonials-slider img {
+        width: 100%;
+        height: auto;
+    }
+    .testimonial__content p {
+        font-size: 1rem;
+    }
+    .testimonial__content h4 {
+        font-size: 1.2rem;
+    }
+    .suggests .section-title {
+        padding: 32px 0;
+    }
+    .suggest-slider .suggests-button-next i, .suggest-slider .suggests-button-prev i {
+        font-size: 30px;
+        width: 40px;
+        height: 40px;
+        line-height: 35px;
+    }
+    .header .logo img {
+        max-height: 40px;
+    }
+    .contact_us textarea, .contact_us input {
+        padding: 2px 10px;
+        font-size: 14px;
+    }
+    .contact_us {
+        padding: 2.5rem 6rem 1rem 6rem;
+    }
+    .contact_us .see-all {
+        width: 80px;
+    }
+    .contact_us textarea {
+        height: 90px;
+    }
+}
+@media (max-width: 400px) { 
+    .contact_us {
+        background-size: 120%;
+        padding: 2.5rem 4rem 1rem 2rem;
+    }
+    .suggest-title {
+        margin: 2rem 0;
+    }
+
+}
+ 
+
+ @media (min-width: 769px) {
+    .bottles__imgs:hover .bottles__img-1 {
+        transform: rotate( -8deg) translate(-70px, 1px);
+        z-index: -3;
+      }
+      .bottles__imgs:hover .bottles__img-2 {
+        z-index: -2;
+        transform: rotate( 1deg) translate(4px, 0px);
+       }
+      
+      .bottles__imgs:hover .bottles__img-3 {
+        transform: rotate( 7deg) translate(70px, 15px);
+        z-index: -1;
+      }
+      .bottles__img-3 {
+        margin-left: -90px;
+    }
+    .bottles__img-1 {
+        margin-right: -90px;
+    }
+
+
+    .product-slider .button-next,
+    .product-slider .button-prev {
+        visibility: hidden;
+        opacity: 0;
+    }
+    .product-slider:hover .button-next,
+    .product-slider:hover .button-prev{
+        visibility: visible;
+        opacity: 1;
+    }
+    .product-slider:hover {
+    background-color: #FDFAF2;
+    border-radius: 20px;
+    box-shadow: 2px 3px 10px #c7c7c7, -2px -2px 10px #c7c7c7;
+    } 
+    .contact_col {
+        margin-left: 50%;
+        transform: translateX(-41%);
+    }  
+ }
+ 
+ @media (max-width: 992px) { 
+     .about__img {
+         margin-bottom: 2rem;
+     }
+    .row-order {
+        flex-direction: column-reverse;
+    }
+ }
+
+ .testimonials-slider img {
+    height: 220px;
+ }
