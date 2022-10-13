@@ -1,4 +1,5 @@
 @extends('layouts.user-layout')
+@section('title', 'Suggests')
 @section('content')
 
 
@@ -8,7 +9,7 @@
           <h3 class="text-center suggest-title">Peydaly Maslahatlar</h3>
 
             <div class="row">
-                          
+
             @foreach($suggests as $suggest)
               <div class="col-md-6 col-lg-4">
                 <div class="suggest-item-page">
@@ -16,9 +17,9 @@
                   <div class="suggest-item__content">
                     <h4>{{ $suggest->{'title_'.app()->getLocale()} }}</h4>
                     <p>{!!
-                       \Illuminate\Support\Str::limit($suggest->{'content_'.app()->getLocale()}, 160, $end='...') 
+                       \Illuminate\Support\Str::limit($suggest->{'content_'.app()->getLocale()}, 160, $end='...')
                       !!}</p>
-                    <a href="{{ route('suggestshow', $suggest->id) }}">Doly oka</a>                
+                    <a href="{{ route('suggestshow', $suggest->id) }}">Doly oka</a>
                   </div>
                 </div>
               </div>
@@ -27,6 +28,6 @@
             </div>
         </div>
     </section>
-    
+
   </main><!-- End #main -->
 @endsection

@@ -12,8 +12,8 @@ use App\Models\Partner;
 class HomeController extends BaseController
 {
 
-    public function index() 
-    {   
+    public function index()
+    {
         $moments = Moment::orderBy('id','DESC')->get();
         $partners = Partner::orderBy('id','ASC')->get();
         $suggests = Suggest::orderBy('id','DESC')->get();
@@ -60,11 +60,11 @@ class HomeController extends BaseController
                 'title' => 'Mail from Zamana.com',
                 'body' => $request->content
             ];
-            
-            \Mail::to('hojajepbar@gmail.com')->send(new \App\Mail\MyTestMail($details));
+
+            \Mail::to('gerchek.g@gmail.com')->send(new \App\Mail\MyTestMail($details));
             return redirect()->back();
         }catch (\Exception $e) {
             return redirect()->back()->withErrors($e->getMessage());
         }
-    }    
+    }
 }

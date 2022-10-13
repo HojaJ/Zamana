@@ -1,4 +1,5 @@
 @extends('layouts.user-layout')
+@section('title', 'Moments')
 @section('content')
 
 
@@ -18,6 +19,6 @@
             </div>
         </div>
     </section>
-    
+
   </main><!-- End #main -->
 @endsection

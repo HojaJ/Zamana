@@ -7,13 +7,13 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta name="keywords" content="TM, Turkmenistan, Zamana, Ashgabat, Peýnir, Süýt, Gatyk, Kefir" />
 
-  <title>{{ config('app.name', 'Zamana') }}</title>
+  <title>Zamana | @yield('title')</title>
   <meta content="" name="description">
 
-  
+
 
   <!-- Favicons -->
-    
+
   <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('img/apple-touch-icon.png') }}">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('img/favicon-32x32.png') }}">
   <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('img/favicon-16x16.png') }}">
@@ -55,28 +55,28 @@
             <a href="{{ LaravelLocalization::getLocalizedURL('ru', null, [], true) }}"><span>RU</span>&nbsp;<img src="{{ asset('img/ru.png') }}" alt="Language"></a>
             @elseif(Request::is('en') || Request::is('en/*') )
             <a href="{{ LaravelLocalization::getLocalizedURL('en', null, [], true) }}"><span>EN</span>&nbsp;<img src="{{ asset('img/en.png') }}" alt="Language"></a>
-            @else 
+            @else
             <a href="{{ LaravelLocalization::getLocalizedURL('tk', null, [], true) }}"><span>TM</span>&nbsp;<img src="{{ asset('img/tm.png') }}" alt="Language"></a>
             @endif
-    
+
             <ul>
               <li>
                 @if(Request::is('ru') || Request::is('ru/*'))
                 <a href="{{ LaravelLocalization::getLocalizedURL('tk', null, [], true) }}"><span>TM</span>&nbsp;<img src="{{ asset('img/tm.png') }}" alt="Language"></a>
                 @elseif(Request::is('en') || Request::is('en/*') )
                 <a href="{{ LaravelLocalization::getLocalizedURL('ru', null, [], true) }}"><span>RU</span>&nbsp;<img src="{{ asset('img/ru.png') }}" alt="Language"></a>
-                @else 
+                @else
                 <a href="{{ LaravelLocalization::getLocalizedURL('en', null, [], true) }}"><span>EN</span>&nbsp;<img src="{{ asset('img/en.png') }}" alt="Language"></a>
-                @endif           
+                @endif
             </li>
               <li>
                 @if(Request::is('ru') || Request::is('ru/*'))
                 <a href="{{ LaravelLocalization::getLocalizedURL('en', null, [], true) }}"><span>EN</span>&nbsp;<img src="{{ asset('img/en.png') }}" alt="Language"></a>
                 @elseif(Request::is('en') || Request::is('en/*') )
                 <a href="{{ LaravelLocalization::getLocalizedURL('tk', null, [], true) }}"><span>TM</span>&nbsp;<img src="{{ asset('img/tm.png') }}" alt="Language"></a>
-                @else 
+                @else
                 <a href="{{ LaravelLocalization::getLocalizedURL('ru', null, [], true) }}"><span>RU</span>&nbsp;<img src="{{ asset('img/ru.png') }}" alt="Language"></a>
-                @endif          
+                @endif
               </li>
             </ul>
           </li>
@@ -88,7 +88,7 @@
   </header><!-- End Header -->
 
   @yield('content')
-  
+
 
   <!-- ======= Footer ======= -->
   <footer class="footer">
@@ -100,23 +100,23 @@
           </a>
         </div>
         <div class="col-sm-12 ms-auto col-md-4  footer-contact  text-start">
-          
+
         @foreach($infos as $info)
           @if($info->id == 2)
             <p><i class="bi bi-geo-alt-fill"></i> {{ $info->{'content_'.app()->getLocale()}  }}</p>
           @elseif($info->id == 3)
             <p><i class="bi bi-envelope-fill"></i> <a href="mailto:{{ $info->{'content_'.app()->getLocale()}  }}">{{ $info->{'content_'.app()->getLocale()}  }}</a></p>
           @elseif($info->id == 4)
-            <p><i class="bi bi-telephone-fill"></i> <a href="tell:{{ $info->{'content_'.app()->getLocale()}  }}"> {{ $info->{'content_'.app()->getLocale()}  }}</a></p>            
+            <p><i class="bi bi-telephone-fill"></i> <a href="tell:{{ $info->{'content_'.app()->getLocale()}  }}"> {{ $info->{'content_'.app()->getLocale()}  }}</a></p>
           @endif
         @endforeach
 
 
 
 
-          
-          
-          
+
+
+
 
         </div>
       </div>

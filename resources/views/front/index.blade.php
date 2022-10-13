@@ -1,9 +1,11 @@
 @extends('layouts.user-layout')
+@section('title', 'Home')
+
 @section('content')
 <main class="main" >
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="hero">
-      <div class="hero-bg"></div>  
+      <div class="hero-bg"></div>
       <div class="additional__div">
         <img class="additional__div-img" src="{{ asset('img/hero-image2.png') }}" alt="Hero">
       </div>
@@ -16,7 +18,7 @@
           <a href="/" class="see-all">Hemmesini gör</a>
         </div>
       </div>
-  
+
       <div class="bottles d-flex justify-content-center ">
         <div class="bottles__imgs d-flex">
           <div class="bottles__img-1">
@@ -40,9 +42,9 @@
               </svg>
             </div>
           <div class="container">
-    
+
             <div class="row">
-    
+
               <div class="col-md-4">
                 <div class="count-box">
                   <img src="{{ asset('img/milk.png') }}" alt="Milk" class="count-box__img">
@@ -52,7 +54,7 @@
                   </div>
                 </div>
               </div>
-    
+
               <div class="col-md-4">
                 <div class="count-box">
                   <img src="{{ asset('img/customer-satisfaction.png') }}" alt="Customer satification" class="count-box__img">
@@ -62,7 +64,7 @@
                   </div>
                 </div>
               </div>
-    
+
               <div class="col-md-4">
                 <div class="count-box">
                   <img src="{{ asset('img/cow.png') }}" alt="Cow" class="count-box__img">
@@ -71,9 +73,9 @@
                     <p>Hyzmatyňyzdaky sygyrlarymyz</p>
                   </div>
                 </div>
-              </div>    
+              </div>
             </div>
-    
+
           </div>
         </section><!-- End Counts Section -->
 
@@ -126,10 +128,10 @@
                   <h3>{{ $suggest->{'title_'.app()->getLocale()} }}</h3>
                   <p>
                   {!!
-                    \Illuminate\Support\Str::limit($suggest->{'content_'.app()->getLocale()}, 160, $end='...') 
+                    \Illuminate\Support\Str::limit($suggest->{'content_'.app()->getLocale()}, 160, $end='...')
                   !!}
                   </p>
-                  <a href="{{ route('suggestshow', $suggest->id) }}">Doly oka</a>                
+                  <a href="{{ route('suggestshow', $suggest->id) }}">Doly oka</a>
                 </div>
               </div>
             </div><!-- End suggest item -->
@@ -137,7 +139,7 @@
 
           </div>
           <div class="suggests-button-prev"><i class="bi bi-arrow-left-short"></i></div>
-          <div class="suggests-button-next"><i class="bi bi-arrow-right-short"></i></div>    
+          <div class="suggests-button-next"><i class="bi bi-arrow-right-short"></i></div>
         </div>
       </div>
     </section><!-- End Suggests Section -->
@@ -153,7 +155,7 @@
           @foreach($partners as $partner)
           <div class="swiper-slide"><img src="{{ asset($partner->image) }}" class="img-fluid" alt=""></div>
           @endforeach
-          
+
         </div>
         </div>
       </div>
@@ -165,7 +167,7 @@
         <h2>Hyzmatdaşlarymyzyň pikiri</h2>
         <div class="testimonials-slider swiper">
           <div class="swiper-wrapper align-items-center">
-          
+
           @foreach($partners as $partner)
             @if(isset($partner->{'testimonial_'.app()->getLocale()}))
             <div class="swiper-slide">
@@ -176,13 +178,13 @@
                   </div>
                   <div class="col-6 text-end">
                     <img src="{{ asset($partner->image) }}" class="img-fluid" alt="Client Logo">
-                  </div>              
+                  </div>
                 </div>
               </div>
               @endif
             @endforeach
 
-            
+
 
 
 
@@ -192,6 +194,6 @@
         </div>
       </div>
     </section><!-- End Testimonials Section -->
-    
+
   </main><!-- End #main -->
 @endsection

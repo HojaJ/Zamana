@@ -1,4 +1,6 @@
 @extends('layouts.user-layout')
+@section('title', 'Products')
+
 @section('content')
 
 
@@ -9,8 +11,8 @@
           <h5 class="text-center mt-2 max-w mx-auto">2016-njy ýyldan bäri söýlüp Halka ýetirilýän süýt önümlerimiz</h5>
             <div class="row justify-content-center">
             @foreach($categories as $category)
-            
-            
+
+
               <div class="col-md-6 col-xl-4 mt-5">
                 <div class="products">
                   <div class="swiper product-slider">
@@ -31,11 +33,11 @@
                   </div>
                 </div>
             </div>
-          
+
           @endforeach
         </div>
-            
+
     </section>
-    
+
   </main><!-- End #main -->
 @endsection
