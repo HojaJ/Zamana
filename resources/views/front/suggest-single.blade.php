@@ -6,7 +6,7 @@
 <main class="main">
     <section class="suggest-detail">
         <div class="container">
-          <h3 class="text-center my-5">Peydaly Maslahatlar</h3>
+          <h3 class="text-center my-5">{{ __("Suggests") }}</h3>
 
             <div class="row">
               <div class="col-md-12 text-center">

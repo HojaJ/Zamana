@@ -4,7 +4,7 @@
 
         <!-- Page Heading -->
         <!-- <div class="d-sm-flex justify-content-end mb-4">
-            <a href="{{ route('admin.about.create') }}" class="btn btn-primary btn-sm">
+{{--            <a href="{{ route('admin.about.create') }}" class="btn btn-primary btn-sm">--}}
                 Goş
             </a>
         </div> -->
@@ -20,7 +20,6 @@
                             <tr>
                                 <th>Ady</th>
                                 <th>Maglumatlar</th>
-                                <th>Surat</th>
                                 <th>Goşmaça</th>
                             </tr>
                         </thead>
@@ -35,25 +34,22 @@
                                         {{ $about->title_en }}
                                     </td>
                                     <td>
-                                        {!! $about->content_tk !!}
+                                        {{ $about->content_tk }}
                                         <hr>
-                                        {!! $about->content_ru !!}
+                                        {{ $about->content_ru }}
                                         <hr>
-                                        {!! $about->content_en !!}
-                                    </td>
-                                    <td>
-                                        <img src="{{asset($about->image)}}" alt="Surat" width="90px">
+                                        {{ $about->content_en }}
                                     </td>
 
                                     <td>
-                                    <a href="{{ route('admin.about.edit', $about->id) }}" class="btn btn-info btn-sm text-white">
+                                    <a href="{{ route('admin.settedit', $about->id) }}" class="btn btn-info btn-sm text-white">
                                             <i class="fas fa-edit"></i> Üýtget
                                         </a>
 {{--                                        <!-- <form action="{{ route('admin.about.destroy', $about->id) }}" method="POST" class="d-inline-block">--}}
 {{--                                            @csrf--}}
 {{--                                            @method('DELETE')--}}
-                                            <button type="submit" class="btn btn-sm text-white btn-danger"><i class="fas fa-trash"></i> Delete</button>
-                                        </form> -->
+{{--                                            <button type="submit" class="btn btn-sm text-white btn-danger"><i class="fas fa-trash"></i> Delete</button>--}}
+{{--                                        </form> -->--}}
                                     </td>
                                 </tr>
                             @endif

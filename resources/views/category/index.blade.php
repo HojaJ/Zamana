@@ -21,7 +21,7 @@
                                 <th>Ady türkmençe</th>
                                 <th>Ady rusça</th>
                                 <th>Ady iňlisçe</th>
-                                <th>Slug</th>
+{{--                                <th>Slug</th>--}}
                                 <th>Goşmaça</th>
                             </tr>
                         </thead>
@@ -31,7 +31,7 @@
                                     <td>{{ $category->name_tk }}</td>
                                     <td>{{ $category->name_ru }}</td>
                                     <td>{{ $category->name_en }}</td>
-                                    <td>{{ $category->slug }}</td>
+{{--                                    <td>{{ $category->slug }}</td>--}}
                                     <td>
                                         <a href="{{route('admin.category.edit', $category->id)}}" class="btn btn-info btn-sm text-white">
                                             <i class="fas fa-edit"></i> Üýtget
@@ -39,7 +39,7 @@
                                         <form action="{{ route('admin.category.destroy', $category->id) }}" method="POST" class="d-inline-block">
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit" class="btn btn-sm text-white btn-danger"><i class="fas fa-trash"></i> Delete</button>
+                                            <button type="submit" class="btn btn-sm text-white btn-danger" id="poz-buton-{{$category->id}}"><i class="fas fa-trash"></i> Delete</button>
                                         </form>
                                     </td>
                                 </tr>

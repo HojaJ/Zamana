@@ -37,16 +37,16 @@
                                         {{ $partner->title_en }}
                                     </td>
                                     <td>
-                                        {{ $partner->testimonial_tk }}
+                                        {!! \Illuminate\Support\Str::limit($partner->testimonial_tk) !!}
                                         <hr>
-                                        {{ $partner->testimonial_ru }}
+                                        {!! \Illuminate\Support\Str::limit($partner->testimonial_ru) !!}
                                         <hr>
-                                        {{ $partner->testimonial_en }}
+                                        {!! \Illuminate\Support\Str::limit($partner->testimonial_en) !!}
                                     </td>
                                     <td>
                                         <img src="{{asset($partner->image)}}" alt="Surat" width="90px">
                                     </td>
-                                    
+
                                     <td>
                                         <a href="{{route('admin.partner.edit', $partner->id)}}" class="btn btn-info btn-sm text-white">
                                             <i class="fas fa-edit"></i> Üýtget
@@ -54,7 +54,7 @@
                                         <form action="{{ route('admin.partner.destroy', $partner->id) }}" method="POST" class="d-inline-block">
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit" class="btn btn-sm text-white btn-danger"><i class="fas fa-trash"></i> Delete</button>
+                                            <button type="submit" class="btn btn-sm text-white btn-danger" id="poz-buton-{{$partner->id}}"><i class="fas fa-trash"></i> Delete</button>
                                         </form>
                                     </td>
                                 </tr>

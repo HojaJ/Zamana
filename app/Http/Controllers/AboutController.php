@@ -28,20 +28,27 @@ class AboutController extends Controller
     public function address()
     {
         $about = About::where('id', 2)->first();
-        return view('about.index', compact('about'));
+        return view('setting.index', compact('about'));
     }
-    
+
     public function email()
     {
         $about = About::where('id', 3)->first();
-        return view('about.index', compact('about'));
+        return view('setting.index', compact('about'));
     }
 
     public function tell()
     {
         $about = About::where('id', 4)->first();
-        return view('about.index', compact('about'));
+        return view('setting.index', compact('about'));
     }
+
+    public function setting_edit(About $about)
+    {
+        return view('setting.edit', compact('about'));
+
+    }
+
 
     /**
      * Show the form for creating a new resource.
@@ -81,7 +88,7 @@ class AboutController extends Controller
                 $about->save();
             }
             return redirect()->route('admin.about.index')->withSuccess('Üstünlikli goşuldy');
-            
+
         } catch (\Exception $e) {
             return redirect()->back()->withErrors($e->getMessage());
         }
@@ -138,8 +145,8 @@ class AboutController extends Controller
                 $about->image = $path;
                 $about->save();
             }
-            return redirect()->route('admin.about.index')->withSuccess('Üstünlikli Uýgedildi');
-            
+            return redirect()->back()->withSuccess('Üstünlikli Uýgedildi');
+
         } catch (\Exception $e) {
             return redirect()->back()->withErrors($e->getMessage());
         }

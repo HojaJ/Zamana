@@ -6,7 +6,7 @@
 <main class="main">
     <section class="moment mt-5">
         <div class="container">
-          <h3 class="text-center suggest-title">Iň gowy pursatlar</h3>
+          <h3 class="text-center suggest-title">{{ __('best_moments') }}</h3>
 
             <div class="row">
               @foreach($moments as $moment)

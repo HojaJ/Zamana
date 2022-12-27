@@ -47,6 +47,7 @@ Route::group(['middleware' => 'auth','prefix' => 'admin', 'as' => 'admin.'], fun
     Route::get('/address', [AboutController::class, 'address'])->name('address');
     Route::get('/email', [AboutController::class, 'email'])->name('email');
     Route::get('/tell', [AboutController::class, 'tell'])->name('tell');
+    Route::get('/settedit/{about}/edit', [AboutController::class, 'setting_edit'])->name('settedit');
 
     Route::resource('/about', AboutController::class);
     Route::resource('/category', App\Http\Controllers\CategoryController::class);

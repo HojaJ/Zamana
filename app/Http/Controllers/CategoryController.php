@@ -41,10 +41,10 @@ class CategoryController extends Controller
                 'name_tk' => ucfirst($request->name_tk),
                 'name_ru' => ucfirst($request->name_ru),
                 'name_en' => ucfirst($request->name_en),
-                'slug' => $request->slug,
+//                'slug' => $request->slug,
             ]);
             return redirect()->route('admin.category.index')->withSuccess('Üstünlikli goşuldy');
-            
+
         } catch (\Exception $e) {
             return redirect()->back()->withErrors($e->getMessage());
         }
@@ -86,10 +86,10 @@ class CategoryController extends Controller
                 'name_tk' => ucfirst($request->name_tk),
                 'name_ru' => ucfirst($request->name_ru),
                 'name_en' => ucfirst($request->name_en),
-                'slug' => $request->slug,
+//                'slug' => $request->slug,
             ]);
             return redirect()->route('admin.category.index')->withSuccess('Üstünlikli Uýgedildi');
-            
+
         } catch (\Exception $e) {
             return redirect()->back()->withErrors($e->getMessage());
         }

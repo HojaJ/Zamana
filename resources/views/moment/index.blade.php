@@ -32,7 +32,7 @@
                                     <td>
                                         <img src="{{asset($moment->image)}}" alt="Surat" width="90px">
                                     </td>
-                                    
+
                                     <td>
                                         <a href="{{route('admin.moment.edit', $moment->id)}}" class="btn btn-info btn-sm text-white">
                                             <i class="fas fa-edit"></i> Üýtget
@@ -40,7 +40,7 @@
                                         <form action="{{ route('admin.moment.destroy', $moment->id) }}" method="POST" class="d-inline-block">
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit" class="btn btn-sm text-white btn-danger"><i class="fas fa-trash"></i> Delete</button>
+                                            <button type="submit" class="btn btn-sm text-white btn-danger" id="poz-buton-{{$moment->id}}"><i class="fas fa-trash"></i> Delete</button>
                                         </form>
                                     </td>
                                 </tr>

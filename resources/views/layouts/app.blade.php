@@ -13,8 +13,11 @@
     <!-- Custom fonts for this template-->
     <link href="{{ asset('vendor/css/all.min.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('vendor/css/jquery.dataTables.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('vendor/sweetalert/sweetalert2.min.css') }}" rel="stylesheet" type="text/css">
     <!-- Custom styles for this template-->
     <link rel="stylesheet" href="{{ asset('css/sb-admin-2.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('vendor/toastr/toastr.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('vendor/summernote/summernote-lite.min.css') }}">
 
 </head>
 
@@ -48,7 +51,7 @@
         <footer class="sticky-footer bg-white">
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; Zamana 2021</span>
+                    <span>Copyright &copy; Zamana 2022</span>
                 </div>
             </div>
         </footer>
@@ -92,11 +95,27 @@
 <script src="{{ asset('vendor/js/dataTables.bootstrap4.min.js') }}"></script>
 
 <!-- Core plugin JavaScript-->
+<script src="{{ asset('vendor/sweetalert/sweetalert2.min.js') }}"></script>
 <script src="{{ asset('vendor/js/jquery.easing.min.js') }}"></script>
 
 <!-- Custom scripts for all pages-->
+<script src="{{ asset('vendor/summernote/summernote-lite.min.js') }}"></script>
+<script src="{{ asset('vendor/toastr/toastr.min.js') }}"></script>
 <script src="{{ asset('js/sb-admin-2.js') }}"></script>
 @stack('scripts')
-</body>
+<script>
+    $(function() {
 
+        @if(session('success'))
+        toastr.success('{{ session("success") }}');
+        @endif
+
+        @if($errors->any())
+        @foreach ($errors->all() as $error)
+        toastr.error('{{$error}}');
+        @endforeach
+        @endif
+    })
+</script>
+</body>
 </html>

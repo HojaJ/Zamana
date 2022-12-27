@@ -15,7 +15,7 @@
     if ($(window).width() < 768) {
       $('.sidebar .collapse').collapse('hide');
     };
-    
+
     // Toggle the side navigation when window is resized below 480px
     if ($(window).width() < 480 && !$(".sidebar").hasClass("toggled")) {
       $("body").addClass("sidebar-toggled");
@@ -52,5 +52,38 @@
     }, 1000, 'easeInOutExpo');
     e.preventDefault();
   });
+
+  $('.textarea_summer').summernote({
+        height: 200
+    });
+
+  $('.table tbody').on('click', "[id^='poz-buton-']", function (event) {
+        var id = $(this).attr('id');
+        id = id.replace("poz-buton-",'');
+        event.preventDefault();
+        Swal.fire({
+            title: "Pozmak islýäňizmi!",
+            icon: 'warning',
+            showCancelButton: true,
+            reverseButtons: true,
+            confirmButtonColor: '#0CC27E',
+            cancelButtonColor: '#FF586B',
+            confirmButtonText: 'Howwa, poz!',
+            cancelButtonText: 'Ýok!',
+            confirmButtonClass: 'btn btn-success ml-1',
+            cancelButtonClass: 'btn btn-danger',
+            buttonsStyling: false
+        }).then((result) => {
+            if (result.isConfirmed) {
+                $('#poz-buton-'+id).parent().submit();
+            } else{
+                Swal.fire(
+                    'Cancelled',
+                    'Goýbolsun edildi',
+                    'error'
+                )
+            }
+        })
+    });
 
 })(jQuery); // End of use strict

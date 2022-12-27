@@ -1,15 +1,13 @@
-
-
 @media (max-width: 768px) {
-    html {
-        overflow-x: hidden;
-    }
-    body {
-        overflow-y: auto;
-    }
+    /*html {*/
+    /*    overflow-x: hidden;*/
+    /*}*/
+    /*body {*/
+    /*    overflow-y: auto;*/
+    /*}*/
 
     .bottles__imgs img {
-        max-width: 75%;
+        max-width: 60%;
     }
     .footer .logo {
         justify-content: center;
@@ -27,16 +25,16 @@
     }
 
     .bottles__imgs:hover .bottles__img-1 {
-        transform: rotate( -8deg) translate(-70px, 1px);
+        transform: none;
         z-index: -3;
       }
       .bottles__imgs:hover .bottles__img-2 {
         z-index: -2;
-        transform: rotate( 1deg) translate(4px, 0px);
+        transform: none;
        }
-      
+
       .bottles__imgs:hover .bottles__img-3 {
-        transform: rotate( 7deg) translate(70px, 15px);
+        transform: none;
         z-index: -1;
       }
       .bottles__img-3 {
@@ -67,9 +65,9 @@
 
     .contact_us {
         padding: 3.5rem 9rem 1rem 6rem;
-        
+
       }
-     
+
       .contact_us .see-all {
         width: 80px;
       }
@@ -80,14 +78,14 @@
         padding: 4px 15px;
       }
 
-    
+
  }
 
- @media (max-width: 500px) { 
+ @media (max-width: 500px) {
     .custom-shape-divider-bottom-1634679102 {
         width: 110%;
     }
-    .clients, 
+    .clients,
     .footer {
         background-size: 125% 100%;
     }
@@ -138,7 +136,7 @@
         height: 90px;
     }
 }
-@media (max-width: 400px) { 
+@media (max-width: 400px) {
     .contact_us {
         background-size: 120%;
         padding: 2.5rem 4rem 1rem 2rem;
@@ -148,7 +146,7 @@
     }
 
 }
- 
+
 
  @media (min-width: 769px) {
     .bottles__imgs:hover .bottles__img-1 {
@@ -159,7 +157,7 @@
         z-index: -2;
         transform: rotate( 1deg) translate(4px, 0px);
        }
-      
+
       .bottles__imgs:hover .bottles__img-3 {
         transform: rotate( 7deg) translate(70px, 15px);
         z-index: -1;
@@ -186,22 +184,18 @@
     background-color: #FDFAF2;
     border-radius: 20px;
     box-shadow: 2px 3px 10px #c7c7c7, -2px -2px 10px #c7c7c7;
-    } 
+    }
     .contact_col {
         margin-left: 50%;
         transform: translateX(-41%);
-    }  
+    }
  }
- 
- @media (max-width: 992px) { 
+
+ @media (max-width: 992px) {
      .about__img {
          margin-bottom: 2rem;
      }
     .row-order {
         flex-direction: column-reverse;
     }
- }
-
- .testimonials-slider img {
-    height: 220px;
  }

@@ -24,18 +24,18 @@
                     </div>
                     <div class="col">
                         <label for="content_tk">Maglumat türkmençe</label>
-                        <textarea id="content_tk" class="form-control" rows="3" name="content_tk">{{ $about->content_tk }}</textarea>
+                        <textarea id="content_tk" class="form-control textarea_summer" rows="3" name="content_tk">{{ $about->content_tk }}</textarea>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col">
                         <label for="title_ru">Ady rusça</label>
-                        <input type="text" class="form-control" name="title_ru" id="title_ru" value="{{ $about->title_ru }}" />
+                        <input type="text" class="form-control " name="title_ru" id="title_ru" value="{{ $about->title_ru }}" />
                     </div>
                     <div class="col">
                         <label for="content_ru">Maglumat rusça</label>
-                        <textarea id="content_ru" class="form-control" rows="3" name="content_ru">{{ $about->content_ru }}</textarea>
+                        <textarea id="content_ru" class="form-control textarea_summer" rows="3" name="content_ru">{{ $about->content_ru }}</textarea>
                     </div>
                 </div>
 
@@ -46,10 +46,10 @@
                     </div>
                     <div class="col">
                         <label for="content_en">Maglumat iňlisçe</label>
-                        <textarea id="content_en" class="form-control" rows="3" name="content_en">{{ $about->content_en }}</textarea>
+                        <textarea id="content_en" class="form-control textarea_summer" rows="3" name="content_en">{{ $about->content_en }}</textarea>
                     </div>
                 </div>
-                
+
                 <div class="form-group">
                     <label for="image">Surat</label>
                     <input type="file" class="form-control" name="image" id="image"/>

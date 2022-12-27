@@ -17,10 +17,10 @@
             <form action="{{route('admin.category.update', $category->id)}}"  method="POST">
                 @csrf
                 @method('PUT')
-                <div class="form-group">
-                    <label for="slug">Slug</label>
-                    <input type="text" class="form-control" name="slug" id="slug" placeholder="Slug"  value="{{$category->slug}}">
-                </div>
+{{--                <div class="form-group">--}}
+{{--                    <label for="slug">Slug</label>--}}
+{{--                    <input type="text" class="form-control" name="slug" id="slug" placeholder="Slug"  value="{{$category->slug}}">--}}
+{{--                </div>--}}
                 <div class="form-group">
                     <label for="name_tk">Ady türkmençe</label>
                     <input type="text" class="form-control" name="name_tk" id="name_tk" placeholder="Ady türkmençe"  value="{{$category->name_tk}}" />

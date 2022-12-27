@@ -14,8 +14,8 @@
     <section class="panel">
       <div class="container">
         <div class="section-title">
-          <h4>Önümlerimiz</h4>
-          <a href="/" class="see-all">Hemmesini gör</a>
+          <h4>{{ __('products') }}</h4>
+          <a href="{{ route('product') }}" class="see-all">{{ __('see_all') }}</a>
         </div>
       </div>
 
@@ -50,7 +50,7 @@
                   <img src="{{ asset('img/milk.png') }}" alt="Milk" class="count-box__img">
                   <div>
                     <span data-purecounter-start="45000" data-purecounter-end="50000" data-purecounter-duration="1" class="purecounter"></span>
-                    <p>Bir ýyldaky bagtly müşderilerimiz</p>
+                    <p>{{ __("happy_cus") }}</p>
                   </div>
                 </div>
               </div>
@@ -60,7 +60,7 @@
                   <img src="{{ asset('img/customer-satisfaction.png') }}" alt="Customer satification" class="count-box__img">
                   <div>
                     <span data-purecounter-start="0" data-purecounter-end="35" data-purecounter-duration="1" class="purecounter"></span>
-                    <p>Bagtly hyzmatdaşlarymyz</p>
+                    <p>{{ __("happy_part") }}</p>
                   </div>
                 </div>
               </div>
@@ -70,7 +70,7 @@
                   <img src="{{ asset('img/cow.png') }}" alt="Cow" class="count-box__img">
                   <div>
                     <span data-purecounter-start="0" data-purecounter-end="300" data-purecounter-duration="1" class="purecounter"></span>
-                    <p>Hyzmatyňyzdaky sygyrlarymyz</p>
+                    <p>{{ __("our_cows") }}</p>
                   </div>
                 </div>
               </div>
@@ -83,8 +83,8 @@
       <section id="moments" class="moments">
         <div class="container">
           <div class="section-title">
-            <h4>Iň gowy pursatlar</h4>
-            <a href="{{ route('moment') }}" class="see-all">Hemmesini gör</a>
+            <h4>{{ __("best_moments") }}</h4>
+            <a href="{{ route('moment') }}" class="see-all">{{ __("see_all") }}</a>
           </div>
           <div class="moments-slider swiper scrollbar-hidden">
             <div class="swiper-wrapper align-items-center">
@@ -114,8 +114,8 @@
 
       <div class="container">
         <div class="section-title">
-          <h4>Bileýin diýseň</h4>
-          <a href="{{ route('suggest') }}" class="see-all">Hemmesini gör</a>
+          <h4>{{ __("want_know") }}</h4>
+          <a href="{{ route('suggest') }}" class="see-all">{{ __("see_all") }}</a>
         </div>
         <div class="suggest-slider swiper">
           <div class="swiper-wrapper">
@@ -131,7 +131,7 @@
                     \Illuminate\Support\Str::limit($suggest->{'content_'.app()->getLocale()}, 160, $end='...')
                   !!}
                   </p>
-                  <a href="{{ route('suggestshow', $suggest->id) }}">Doly oka</a>
+                  <a href="{{ route('suggestshow', $suggest->id) }}">{{ __("read_more") }}</a>
                 </div>
               </div>
             </div><!-- End suggest item -->
@@ -148,7 +148,7 @@
     <!-- ======= Clients Section ======= -->
     <section class="clients">
       <div class="container">
-        <h3>Bize ynanýalar</h3>
+        <h3>{{ __("trust_us") }}</h3>
         <div class="clients-slider swiper">
           <div class="swiper-wrapper align-items-center">
 
@@ -164,7 +164,7 @@
     <!-- ======= Testimonials Section ======= -->
     <section class="testimonials">
       <div class="container">
-        <h2>Hyzmatdaşlarymyzyň pikiri</h2>
+        <h2>{{ __("partner_opinion") }}</h2>
         <div class="testimonials-slider swiper">
           <div class="swiper-wrapper align-items-center">
 

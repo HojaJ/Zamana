@@ -37,16 +37,16 @@
                                         {{ $suggest->title_en }}
                                     </td>
                                     <td>
-                                        {{ $suggest->content_tk }}
+                                        {!! \Illuminate\Support\Str::limit($suggest->content_tk,100, $end='...') !!}
                                         <hr>
-                                        {{ $suggest->content_ru }}
+                                        {!! \Illuminate\Support\Str::limit($suggest->content_ru,100, $end='...') !!}
                                         <hr>
-                                        {{ $suggest->content_en }}
+                                        {!! \Illuminate\Support\Str::limit($suggest->content_en,100, $end='...') !!}
                                     </td>
                                     <td>
                                         <img src="{{asset($suggest->image)}}" alt="Surat" width="90px">
                                     </td>
-                                    
+
                                     <td>
                                         <a href="{{route('admin.suggest.edit', $suggest->id)}}" class="btn btn-info btn-sm text-white">
                                             <i class="fas fa-edit"></i> Üýtget
@@ -54,7 +54,7 @@
                                         <form action="{{ route('admin.suggest.destroy', $suggest->id) }}" method="POST" class="d-inline-block">
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit" class="btn btn-sm text-white btn-danger"><i class="fas fa-trash"></i> Delete</button>
+                                            <button type="submit" class="btn btn-sm text-white btn-danger" id="poz-buton-{{$suggest->id}}"><i class="fas fa-trash"></i> Delete</button>
                                         </form>
                                     </td>
                                 </tr>

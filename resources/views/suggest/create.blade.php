@@ -23,7 +23,7 @@
                     </div>
                     <div class="col">
                         <label for="content_tk">Maslahat türkmençe</label>
-                        <textarea id="content_tk" class="form-control" rows="3" name="content_tk"></textarea>
+                        <textarea id="content_tk" class="form-control textarea_summer" rows="3" name="content_tk"></textarea>
                     </div>
                 </div>
 
@@ -34,7 +34,7 @@
                     </div>
                     <div class="col">
                         <label for="content_ru">Maslahat rusça</label>
-                        <textarea id="content_ru" class="form-control" rows="3" name="content_ru"></textarea>
+                        <textarea id="content_ru" class="form-control textarea_summer" rows="3" name="content_ru"></textarea>
                     </div>
                 </div>
 
@@ -45,10 +45,10 @@
                     </div>
                     <div class="col">
                         <label for="content_en">Maslahat iňlisçe</label>
-                        <textarea id="content_en" class="form-control" rows="3" name="content_en"></textarea>
+                        <textarea id="content_en" class="form-control textarea_summer" rows="3" name="content_en"></textarea>
                     </div>
                 </div>
-                
+
                 <div class="form-group">
                     <label for="image">Surat</label>
                     <input type="file" class="form-control" name="image" id="image"/>
