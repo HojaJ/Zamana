@@ -19,7 +19,7 @@
                     <p>{!!
                        \Illuminate\Support\Str::limit($suggest->{'content_'.app()->getLocale()}, 160, $end='...')
                       !!}</p>
-                    <a href="{{ route('suggestshow', $suggest->id) }}">Doly oka</a>
+                    <a href="{{ route('suggestshow', $suggest->id) }}">{{ __("read_more") }}</a>
                   </div>
                 </div>
               </div>
