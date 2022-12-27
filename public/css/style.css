@@ -520,7 +520,7 @@ background-color: transparent !important;
     width: 100%;
     overflow: hidden;
     line-height: 0;
-
+    max-width: 100%;
 }
 
 .custom-shape-divider-bottom-1634679102 svg {
