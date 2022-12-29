@@ -46,7 +46,7 @@
         <ul>
           <li><a class="nav-link {{ (Request::is('/') || Request::is('en') || Request::is('ru')) ? 'active' : '' }}" href="{{ route('home') }}">{{ __('Home') }}</a></li>
           <li><a class="nav-link {{ (Request::is('product') || Request::is('en/product') || Request::is('ru/product')) ? 'active' : '' }}" href="{{ route('product') }}">{{ __('Products') }}</a></li>
-          <li><a class="nav-link {{ (Request::is('suggest/*') || (Request::is('en/suggest') || Request::is('en/suggest/*')) || (Request::is('ru/suggest') || Request::is('ru/suggest/*')) ) ? 'active' : '' }}" href="{{ route('suggest') }}">{{ __('Suggests') }}</a></li>
+          <li><a class="nav-link {{ (Request::is('suggest/*') || Request::is('en/suggest')  || Request::is('suggest') || Request::is('en/suggest/*') || (Request::is('ru/suggest') || Request::is('ru/suggest/*')) ) ? 'active' : '' }}" href="{{ route('suggest') }}">{{ __('Suggests') }}</a></li>
           <li><a class="nav-link {{ (Request::is('moment') || Request::is('en/moment') || Request::is('ru/moment')) ? 'active' : '' }}" href="{{ route('moment') }}">{{ __('Moments') }}</a></li>
           <li><a class="nav-link {{ (Request::is('about') || Request::is('en/about') || Request::is('ru/about')) ? 'active' : '' }}" href="{{ route('about') }}">{{ __('About') }}</a></li>
 

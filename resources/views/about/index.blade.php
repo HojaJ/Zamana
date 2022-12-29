@@ -28,18 +28,18 @@
                             @if( isset($about) )
                                 <tr>
                                     <td>
-                                        {{ $about->title_tk }}
+                                        {!! $about->title_tk !!}
                                         <hr>
-                                        {{ $about->title_ru }}
+                                        {!!  $about->title_ru !!}
                                         <hr>
-                                        {{ $about->title_en }}
+                                        {!! $about->title_en !!}
                                     </td>
                                     <td>
-                                        {!! $about->content_tk !!}
+                                        {!! \Illuminate\Support\Str::limit($about->content_tk,150, $end='...') !!}
                                         <hr>
-                                        {!! $about->content_ru !!}
+                                        {!! \Illuminate\Support\Str::limit($about->content_ru,150, $end='...') !!}
                                         <hr>
-                                        {!! $about->content_en !!}
+                                        {!! \Illuminate\Support\Str::limit($about->content_en,150, $end='...') !!}
                                     </td>
                                     <td>
                                         <img src="{{asset($about->image)}}" alt="Surat" width="90px">
@@ -49,11 +49,6 @@
                                     <a href="{{ route('admin.about.edit', $about->id) }}" class="btn btn-info btn-sm text-white">
                                             <i class="fas fa-edit"></i> Üýtget
                                         </a>
-{{--                                        <!-- <form action="{{ route('admin.about.destroy', $about->id) }}" method="POST" class="d-inline-block">--}}
-{{--                                            @csrf--}}
-{{--                                            @method('DELETE')--}}
-                                            <button type="submit" class="btn btn-sm text-white btn-danger"><i class="fas fa-trash"></i> Delete</button>
-                                        </form> -->
                                     </td>
                                 </tr>
                             @endif

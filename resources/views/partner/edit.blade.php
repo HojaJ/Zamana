@@ -23,7 +23,7 @@
                     </div>
                     <div class="col">
                         <label for="testimonial_tk">Komentariýasy türkmençe</label>
-                        <textarea id="testimonial_tk" class="form-control" rows="3" name="testimonial_tk">{{ $partner->testimonial_tk }}</textarea>
+                        <textarea id="testimonial_tk" class="form-control textarea_summer" rows="3" name="testimonial_tk">{{ $partner->testimonial_tk }}</textarea>
                     </div>
                 </div>
 
@@ -34,7 +34,7 @@
                     </div>
                     <div class="col">
                         <label for="testimonial_ru">Komentariýasy rusça</label>
-                        <textarea id="testimonial_ru" class="form-control" rows="3" name="testimonial_ru">{{ $partner->testimonial_ru }}</textarea>
+                        <textarea id="testimonial_ru" class="form-control textarea_summer" rows="3" name="testimonial_ru">{{ $partner->testimonial_ru }}</textarea>
                     </div>
                 </div>
 
@@ -45,10 +45,10 @@
                     </div>
                     <div class="col">
                         <label for="testimonial_en">Komentariýasy iňlisçe</label>
-                        <textarea id="testimonial_en" class="form-control" rows="3" name="testimonial_en">{{ $partner->testimonial_en }}</textarea>
+                        <textarea id="testimonial_en" class="form-control textarea_summer" rows="3" name="testimonial_en">{{ $partner->testimonial_en }}</textarea>
                     </div>
                 </div>
-                
+
                 <div class="form-group">
                     <label for="image">Surat</label>
                     <input type="file" class="form-control" name="image" id="image"/>
