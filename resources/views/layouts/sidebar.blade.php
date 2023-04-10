@@ -1,7 +1,7 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('admin.about.index') }}">
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('admin.settings.index') }}">
         <div class="sidebar-brand-text">Zamana</div>
     </a>
 
@@ -18,6 +18,7 @@
         <div id="collapseOne" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Bölümler:</h6>
+                <a class="collapse-item" href="{{ route('admin.settings.index') }}">HomePage</a>
                 <a class="collapse-item" href="{{ route('admin.aboutus') }}">About Us</a>
                 <a class="collapse-item" href="{{ route('admin.address') }}">Address</a>
                 <a class="collapse-item" href="{{ route('admin.email') }}">Email</a>

@@ -39,7 +39,9 @@
     <div class="container d-flex align-items-center justify-content-between">
 
       <div class="logo d-flex align-items-center">
-        <img src="{{ asset('img/logo.png') }}" alt="Logo">
+        <a href="{{route('home')}}">
+          <img src="{{ asset('img/logo.png') }}" alt="Logo">
+        </a>
       </div>
 
       <nav id="navbar" class="navbar">
@@ -95,7 +97,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12 col-md-4">
-          <a href="/" class="logo d-flex align-items-center">
+          <a href="{{ route('home') }}" class="logo d-flex align-items-center">
             <img src="{{ asset('img/logo.png') }}" alt="Logo">
           </a>
         </div>

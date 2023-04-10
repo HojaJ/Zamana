@@ -390,7 +390,11 @@ background-color: transparent !important;
   position: relative;
   margin-bottom: -26px;
 }
-
+@media screen and (max-width: 1000px) {
+  .panel .section-title{
+    transform: translateY(80px);
+  }
+}
 .section-title h4{
   color: #001802;
   font-weight: 800;

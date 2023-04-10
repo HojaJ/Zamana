@@ -41,7 +41,9 @@ Route::post('send-mail', [HomeController::class, 'sendMail'])->name('mail');
 
 Route::group(['middleware' => 'auth','prefix' => 'admin', 'as' => 'admin.'], function() {
 
-    Route::get('/', [AboutController::class, 'index']);
+    Route::get('/',function (){
+        return redirect()->route('admin.settings.index');
+    });
 
     Route::get('/aboutus', [AboutController::class, 'aboutus'])->name('aboutus');
     Route::get('/address', [AboutController::class, 'address'])->name('address');
@@ -50,6 +52,7 @@ Route::group(['middleware' => 'auth','prefix' => 'admin', 'as' => 'admin.'], fun
     Route::get('/settedit/{about}/edit', [AboutController::class, 'setting_edit'])->name('settedit');
 
     Route::resource('/about', AboutController::class);
+    Route::resource('/settings', App\Http\Controllers\SettingsController::class);
     Route::resource('/category', App\Http\Controllers\CategoryController::class);
     Route::resource('/product', App\Http\Controllers\ProductController::class);
     Route::resource('/moment', App\Http\Controllers\MomentController::class);
