@@ -1,6 +1,5 @@
 @extends('layouts.user-layout')
 @section('title', 'Home')
-
 @section('content')
 <main class="main" >
     <!-- ======= Hero Section ======= -->
@@ -49,7 +48,7 @@
                 <div class="count-box">
                   <img src="{{ asset('img/milk.png') }}" alt="Milk" class="count-box__img">
                   <div>
-                    <span data-purecounter-start="45000" data-purecounter-end="50000" data-purecounter-duration="1" class="purecounter"></span>
+                    <span data-purecounter-start="45000" data-purecounter-end="{{ \App\Models\Settings::where('name','Our happy customers for year')->get()->toArray()[0]['val'] }}" data-purecounter-duration="1" class="purecounter"></span>
                     <p>{{ __("happy_cus") }}</p>
                   </div>
                 </div>
@@ -59,7 +58,7 @@
                 <div class="count-box">
                   <img src="{{ asset('img/customer-satisfaction.png') }}" alt="Customer satification" class="count-box__img">
                   <div>
-                    <span data-purecounter-start="0" data-purecounter-end="35" data-purecounter-duration="1" class="purecounter"></span>
+                    <span data-purecounter-start="0" data-purecounter-end="{{ \App\Models\Settings::where('name','Our lucky partners')->get()->toArray()[0]['val'] }}" data-purecounter-duration="1" class="purecounter"></span>
                     <p>{{ __("happy_part") }}</p>
                   </div>
                 </div>
@@ -69,7 +68,7 @@
                 <div class="count-box">
                   <img src="{{ asset('img/cow.png') }}" alt="Cow" class="count-box__img">
                   <div>
-                    <span data-purecounter-start="0" data-purecounter-end="300" data-purecounter-duration="1" class="purecounter"></span>
+                    <span data-purecounter-start="0" data-purecounter-end="{{ \App\Models\Settings::where('name','Our cows at your service')->get()->toArray()[0]['val'] }}" data-purecounter-duration="1" class="purecounter"></span>
                     <p>{{ __("our_cows") }}</p>
                   </div>
                 </div>

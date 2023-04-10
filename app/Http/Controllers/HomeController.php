@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Settings;
+use Hamcrest\Core\Set;
 use Illuminate\Http\Request;
 use App\Models\About;
 use App\Models\Moment;
